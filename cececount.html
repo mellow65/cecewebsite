@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Counting Practice</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background-color: pink;
+    }
+
+    #content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-right: 30px;
+    }
+
+    #countBy {
+      width: 100px;
+      padding: 10px;
+      font-size: 24px;
+    }
+
+    #answerBox {
+      width: 100px;
+      padding: 10px;
+      font-size: 24px;
+    }
+
+    #message {
+      color: red;
+    }
+
+    #correctListContainer {
+      text-align: center;
+    }
+
+    #correctList {
+      list-style-type: none;
+      padding: 0;
+      margin: 10px auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    #correctList li {
+      font-size: 24px;
+      margin: 5px;
+    }
+
+	
+	
+	
+	
+	
+  </style>
+</head>
+<body>
+  <div id="content">
+    <h1 style="margin-bottom: 0;">Counting Practice</h1>
+    <p style="margin-top: 5px;">
+      <label for="countBy" style="font-size: 24px;">Enter the number to count by:</label>
+    </p>
+    <input type="number" id="countBy" min="1">
+    <br><br>
+    <label for="answerBox">Enter the next number:</label>
+    <input type="text" id="answerBox" onkeydown="handleKeyDown(event)">
+    <p id="message"></p>
+  </div>
+  
+  <div id="correctListContainer">
+    <h2 style="margin-top: 0;">Numbers you've gotten right so far:</h2>
+    <ul id="correctList"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
